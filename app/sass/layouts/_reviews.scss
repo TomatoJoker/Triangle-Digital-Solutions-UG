@@ -1,0 +1,146 @@
+.reviews {
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__slider {
+    width: 100%;
+    border-radius: $rounded;
+    box-sizing: border-box;
+
+    @include min-media(1200) {
+      max-width: 1024px;
+    }
+
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include min-media(768) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include min-media(1024) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__btn:nth-child(n) {
+    @include size(46);
+    border-radius: 8px;
+    border: 1px solid $accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $dark;
+    background: $light;
+    order: 1;
+
+    @include min-media(1200) {
+      order: 0;
+    }
+
+    @include hover {
+      background: $accent;
+      color: $light;
+    }
+  }
+
+  &__text-wrapper {
+
+    @include min-media(1024) {
+      max-width: 512px;
+    }
+
+  }
+
+  &__stars {
+    color: $star;
+    display: flex;
+    justify-content: center;
+
+    @include min-media(1024) {
+      justify-content: flex-start;
+    }
+
+    li {
+      line-height: 0;
+    }
+
+  }
+
+  &__title,
+  &__item-list {
+    margin-top: 24px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    color: $dark;
+  }
+
+  &__item-list {
+    display: flex;
+
+    li {
+      position: relative;
+      padding-right: 12px;
+      margin-right: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $light-text;
+
+      &:not(:last-child) {
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 10px;
+          background: $light-text;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__item-text {
+    margin-top: 20px;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    line-height: 0;
+  }
+
+}

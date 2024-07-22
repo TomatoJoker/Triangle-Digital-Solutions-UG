@@ -1,0 +1,6 @@
+/*--------- font-face ---------*/
+//@mixin font($weight, $style, $fontName, $fileName, $folderName: $fontName)
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@include font(400, normal, 'Roboto Condensed', 'RobotoCondensed-Regular', 'Roboto-Condensed');
+@include font(500, normal, 'Roboto Condensed', 'RobotoCondensed-Medium', 'Roboto-Condensed');
+@include font(700, normal, 'Roboto Condensed', 'RobotoCondensed-Bold', 'Roboto-Condensed');

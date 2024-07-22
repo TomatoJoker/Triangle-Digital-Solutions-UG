@@ -1,0 +1,236 @@
+{% set title = 'Home' %}
+{% set stylePage = 'home-page' %}
+{% set stylesVendor = ['swiper-bundle'] %}
+{% set scripts = ['swiper-bundle'] %}
+{% extends 'layouts/layout.njk' %}
+{% block content %}
+<div class="wrapper">
+    {% include 'components/header.njk' %}
+    <main class="main-wrapper">
+        <h1 class="visually-hidden">Home page</h1>
+        <section class="help section section__bg-img">
+            <div class="container">
+                <h2 class="h2-title section__title">Wie können wir Ihnen <span>weiterhelfen?</span></h2>
+                {% set list = [
+                        {
+                        icon: 'job',
+                        title: 'Passende Kandidaten finden',
+                        text: 'Mitarbeiter finden so funktioniert´s erfahren Sie mehr über unseren Stellenanzeigen'
+                        },
+                        {
+                        icon: 'lightbulb',
+                        title: 'Tipps in der ILERO HR-Magazin',
+                        text: 'Vertiefen und erweitern Sie Ihr Wissen durch die vielfältigen Studien und Blog-Beiträge, die wir bereitstellen.'
+                        },
+                        {
+                        icon: 'brain',
+                        title: 'Hilfe, Schullungen für Websitenutzung',
+                        text: 'Hier finden Sie die wichtigsten Antworten und auf alle wichtigen Fragen.'
+                        }
+                        ] %}
+                <ul class="help__row row">
+                    {% for listItem in list %}
+                        <li class="help__card card card__lighter">
+
+                            <div class="help__card-top">
+                                <img class="help__card-icon" src="./images/{{ listItem.icon }}.svg" width="72"
+                                     height="72" alt="">
+                                <h3 class="h4-title help__card-title">{{ listItem.title }}</h3>
+                            </div>
+
+                            <p>{{ listItem.text }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="help__content content">
+                    <p>Kostenlos Mitarbeiter finden? <a href="#">Jetzt Stellenanzeige schalten</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="quality section section__bg">
+            <div class="container">
+                <div class="quality__heading-wrapper quality__small-wrapper">
+                    <div class="quality__heading-left">
+                        <h2 class="h2-title quality__title">Fachwissen trifft auf Qualität:</h2>
+                        <h3 class="quality__sub-title">Ihre Vorteile mit ILERO - JOBS</h3>
+                    </div>
+                    <div class="quality__heading-right text-large">
+                        <p>
+                            Mit täglich über 150 Neuanmeldungen sind wir die am schnellsten wachsende Jobbörse in
+                            Deutschland. Wir bringen Arbeitgeber und Arbeitssuchende schnell und effektiv
+                            zusammen – sowohl in Vollzeit, Teilzeit, befristet als auch auf Stundenbasis, über
+                            alle Branchen und Fachgebiete hinweg.
+                        </p>
+                    </div>
+                </div>
+                <div class="quality__content-wrapper">
+                    {% set quality = [
+                            {
+                            title: 'Meistbesuchte Plattform von UA - Fachkräfte',
+                            text: 'Verlassen Sie sich auf eine der Meistbesuchten Plattformen für  Stellenangebote .'
+                            },
+                            {
+                            title: 'Einzigartige Partnerprogramme',
+                            text: 'Profitieren Sie von unseren Partner-  Netzwerk und schalten Síe Ihre Stellenangebote in mehr als 500  Jobbörsen mit einem Klick.'
+                            },
+                            {
+                            title: 'Employer Branding für Ihr Unternehmen',
+                            text: 'Unsere Company Hub mit Individuell entwickelten Layouts und Stellenanzeige Design steht Ihnen Kostenlos zur Verfügung.'
+                            }
+                            ] %}
+                    <ul class="quality__list quality__small-wrapper row">
+                        {% for qualityItem in quality %}
+                            <li class="quality__item">
+                                <h4 class="h4-title quality__item-title">{{ qualityItem.title }}</h4>
+                                <p>{{ qualityItem.text }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="steps section section__bg">
+            <div class="container">
+                <h2 class="visually-hidden">Steps section</h2>
+                <ul class="steps__list">
+                    {% set steps = [
+                            {
+                            step: '500',
+                            title: 'Mit uns erreicht Ihre Anzeige jeden Arbeitssuchenden!',
+                            description: 'Maximieren Sie die Sichtbarkeit Ihrer Stellenanzeige und finden Sie die besten Talente für Ihr Unternehmen mit mehr als 500 Partner Stellenbörsen, Regionalportalen und Fachportalen.'
+                            },
+                            {
+                            step: '95%',
+                            title: 'Jedes Unternehmen hat einen Mitarbeiter',
+                            description: 'Wir haben den Prozess der Stellenveröffentlichung für Sie verbessert. Mit unserem neuen, benutzerfreundlichen Dashboard können Sie den gesamten Rekrutierungsprozess einfach und effizient steuern. In unserer Datenbank sind 95% der Lebensläufe vollständig ausgefüllt, was Ihnen umfassende und präzise Informationen über die Qualifikationen der Bewerber liefert.'
+                            },
+                            {
+                            step: '87%',
+                            title: 'Mehr Erfolg durch gezielte Jobschaltung!',
+                            description: 'Studien zeigen das 87% der Unternehmen ihre Mitarbeiter finden, indem sie ihre offenen Stellen ausschreiben. Vertrauen auch Sie auf unsere effiziente Rekrutierungslösung und besetzen Sie Ihre Positionen schnell und zielgerichtet.'
+                            },
+                            {
+                            step: '100%',
+                            title: 'Ausgezeichnete Kundenservice',
+                            list: [
+                            '100% Myself-Service  veröffentlichen Sie sofort Ihre Stellenanzeigen online',
+                            'Entscheiden Sie sich für  Premium-Stellenanzeige  und profitieren Sie von einem ansprechenden Employer-Profil-Design ',
+                            'Ein fester Ansprechpartner kümmert sich persönlich um all Ihre Anliegen.'
+                            ],
+                            description: 'Nutzen Sie unsere Kostenlose Kundenservice',
+                            description2: 'Mo - Fr. 10.00 bis 22.00 Uhr '
+                            }
+                            ] %}
+                    {% for stepsItem in steps %}
+                        <li class="steps__item">
+                            <div class="steps__content">
+                                <div class="steps__text-wrapper">
+                                    <h3 class="steps__title h3-title">{{ stepsItem.title }}</h3>
+                                    <div class="steps__text content">
+                                        {% if stepsItem.list %}
+                                            <ul>
+                                            {% for stepsList in stepsItem.list  %}
+                                                    <li>{{ stepsList }}</li>
+                                            {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                        <p>
+                                            {{ stepsItem.description }}
+                                            {% if stepsItem.description2 %}
+                                                <br>{{ stepsItem.description2 }}
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="steps__circle h2-title">
+                                    {{ stepsItem.step }}
+                                </span>
+                            </div>
+                            <div class="steps__image">
+                                <img width="444" height="400" src="./images/steps-{{ loop.index }}.svg" alt="">
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        <section class="brands section section__bg-img section__bg-revert">
+            <div class="container">
+                <div class="section__title">
+                    <h2 class="h2-title">Diese Unternehmen</h2>
+                    <p class="brands__description text-large">Finden bereits Mitarbeiter auf ILERO - JOBS:</p>
+                </div>
+                <ul class="brands__list row">
+                    {% for i in range(1, 5) %}
+                        <li class="brands__item card">
+                            <img src="./images/brand-{{ i }}.svg" width="268" height="100" alt="">
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        <section class="reviews section">
+            <div class="container">
+                <div class="reviews__heading section__title">
+                    <h2 class="reviews__wrapper-title h2-title">Erfolgsgeschichten</h2>
+                    <a href="#" class="button">Ihre Feedback</a>
+                </div>
+                <div class="reviews__content js-review-slider">
+                    <button type="button" class="reviews__btn button__full-reset js-review-btn-prev">
+                        <svg class="icon" width="14" height="14">
+                            <use href="./images/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <div class="reviews__slider swiper js-review-inner">
+                        <ul class="swiper-wrapper">
+                            {% for item in range(1, 3) %}
+                                <li class="reviews__item card swiper-slide">
+                                    <picture class="reviews__image">
+                                        <source srcset="./images/review.png 1x, ./images/review@2x.png 2x"
+                                                type="image/jpeg"/>
+                                        <img src="./images/review.jpg" width="367" height="367" alt=""/>
+                                    </picture>
+                                    <div class="reviews__text-wrapper">
+                                        <ul class="reviews__stars">
+                                            {% for i in range(1, 6) %}
+                                                <li>
+                                                    <svg class="icon{{ ' icon__fill' if i < 5 }}" width="24"
+                                                         height="25">
+                                                        <use href="./images/sprite.svg#star"></use>
+                                                    </svg>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                        <h3 class="reviews__title h3-title">Effiziente Vermittlung von Talenten</h3>
+                                        <div class="reviews__item-text">
+                                            <p>Unsere Zusammenarbeit mit Erotikstadt war außergewöhnlich effizient und
+                                                erfolgreich. Die Plattform hat es uns ermöglicht, schnell und
+                                                unkompliziert
+                                                genau die Talente zu finden, die wir für unser Unternehmen gesucht
+                                                haben.
+                                                Besonders beeindruckt hat uns die intuitive Bedienung und die Qualität
+                                                der
+                                                Kandidatenprofile. Wir freuen uns auf eine fortgesetzte erfolgreiche
+                                                Partnerschaft.</p>
+                                        </div>
+                                        <ul class="reviews__item-list">
+                                            <li>Markus Becker</li>
+                                            <li>Geschäftsführer, Nightlife Entertainment GmbH</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <button type="button" class="reviews__btn button__full-reset js-review-btn-next">
+                        <svg class="icon" width="14" height="14">
+                            <use href="./images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include 'components/footer.njk' %}
+</div>
+{% endblock %}

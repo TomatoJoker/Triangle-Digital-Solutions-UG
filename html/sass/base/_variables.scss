@@ -1,0 +1,34 @@
+// Colors
+$light: #fff;
+$dark: #2d2e2e;
+$dark-light: #474B56;
+$decor: #F5F9FE;
+$accent: #0C93F4;
+$text: #5F6061;
+$light-text: #929292;
+$transparent: rgba(255, 255, 255, 0);
+$disclaimer: #77838E;
+$card-bg: #EBF8FF;
+$star: #FFE55B;
+
+
+// global animation params
+$speed: 300ms;
+$time-function: ease-in-out;
+
+:root {
+  --vh: 1vh;
+}
+
+//font
+$base-font: "Roboto Flex";
+$second-font: 'Roboto Condensed';
+
+//layout
+$rounded: 24px;
+$big-rounded: 45px;
+$gap: 36px;
+$padding: 20px;
+$desktop-width: 1560px;
+$site-container: $desktop-width + ($padding * 2);
+

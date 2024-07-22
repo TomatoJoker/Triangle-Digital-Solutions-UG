@@ -1,0 +1,133 @@
+.steps {
+  border-radius: 0px 0px $big-rounded $big-rounded;
+
+  &__item {
+
+    &:first-child {
+
+      .steps__content {
+
+        @include min-media(1500) {
+
+          &:before {
+            content: '';
+            z-index: 0;
+            width: 156px;
+            height: 1657px;
+            position: absolute;
+            right: -96px;
+            top: 0px;
+            background: url('data:image/svg+xml,<svg width="156" height="1657" viewBox="0 0 156 1657" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.999939 0C0.999966 281.415 154.502 222.433 154.502 525.341C154.502 828.25 0.999939 855.242 0.999939 1129.16C0.999939 1403.08 155 1380.58 155 1657" stroke="%230C93F4" stroke-width="2" stroke-dasharray="24 24" /></svg>');
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: top center;
+          }
+
+        }
+
+
+      }
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include min-media(1200) {
+        margin-bottom: 160px;
+      }
+    }
+
+    @include min-media(1200) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        .steps__content {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+  }
+
+  &__circle {
+    background: $accent;
+    color: $light;
+    border-radius: 50%;
+    @include size(120);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__content {
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+
+    @include min-media(1200) {
+      flex-shrink: 0;
+      max-width: 760px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+  }
+
+  &__title {
+    color: $accent;
+  }
+
+  &__content {
+
+    @include min-media(1200) {
+      display: flex;
+
+    }
+
+  }
+
+  &__text-wrapper {
+
+    @include min-media(1200) {
+      max-width: 560px;
+    }
+
+  }
+
+  &__text {
+    margin-top: 16px;
+    color: #282a2d;
+    @include font-settings(18, 28);
+    font-family: $base-font, sans-serif;
+  }
+
+  &__image {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+
+    @include media(1200) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+    }
+  }
+}

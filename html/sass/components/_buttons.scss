@@ -1,0 +1,20 @@
+.button {
+  display: inline-block;
+  border: 1px solid $dark-light;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: $dark;
+  background: $light;
+
+  @include transition;
+
+  @include hover() {
+    border-color: $accent;
+    background: $accent;
+    color: $light;
+  }
+
+}

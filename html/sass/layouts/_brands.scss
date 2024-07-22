@@ -1,0 +1,32 @@
+.brands {
+
+  &__list {
+    flex-wrap: wrap;
+
+    @include min-media(768) {
+      flex-direction: row;
+      gap: $gap;
+    }
+
+  }
+
+  &__item {
+    border: none;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+
+    @include media(768) {
+      justify-content: center;
+    }
+
+    @include min-media(768) {
+      @include flex-basis-responsive(2, $gap);
+    }
+
+    @include min-media(1200) {
+      @include flex-basis-responsive(4, $gap);
+    }
+  }
+
+}
