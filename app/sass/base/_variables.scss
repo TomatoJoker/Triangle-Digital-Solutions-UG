@@ -1,34 +1,59 @@
+:root {
+  // Colors
+  --light: #fff;
+  --dark: #2d2e2e;
+  --dark-light: #474B56;
+  --decor: #F5F9FE;
+  --accent: #0C93F4;
+  --text: #5F6061;
+  --light-text: #929292;
+  --transparent: rgba(255, 255, 255, 0);
+  --disclaimer: #77838E;
+  --card-bg: #EBF8FF;
+  --star: #FFE55B;
+  // global animation params
+  --speed: 300ms;
+  --time-function: ease-in-out;
+  //font
+  --base-font: "Roboto Flex";
+  --second-font: 'Roboto Condensed';
+  //layout
+  --vh: 1vh;
+  --rounded: 24px;
+  --big-rounded: 45px;
+  --gap: 36px;
+  --padding: 20px;
+  --desktop-width: 1560px;
+  --site-container: calc(var(--desktop-width) + (var(--padding) * 2));
+}
+
 // Colors
-$light: #fff;
-$dark: #2d2e2e;
-$dark-light: #474B56;
-$decor: #F5F9FE;
-$accent: #0C93F4;
-$text: #5F6061;
-$light-text: #929292;
-$transparent: rgba(255, 255, 255, 0);
-$disclaimer: #77838E;
-$card-bg: #EBF8FF;
-$star: #FFE55B;
+$light: var(--light);
+$dark: var(--dark);
+$dark-light: var(--dark-light);
+$decor: var(--decor);
+$accent: var(--accent);
+$text: var(--text);
+$light-text: var(--light-text);
+$transparent: var(--transparent);
+$disclaimer: var(--disclaimer);
+$card-bg: var(--card-bg);
+$star: var(--star);
 
 
 // global animation params
-$speed: 300ms;
-$time-function: ease-in-out;
-
-:root {
-  --vh: 1vh;
-}
+$speed: var(--speed);
+$time-function: var(--time-function);
 
 //font
-$base-font: "Roboto Flex";
-$second-font: 'Roboto Condensed';
+$base-font: var(--base-font);
+$second-font: var(--second-font);
 
 //layout
-$rounded: 24px;
-$big-rounded: 45px;
-$gap: 36px;
-$padding: 20px;
-$desktop-width: 1560px;
-$site-container: $desktop-width + ($padding * 2);
+$rounded: var(--rounded);
+$big-rounded: var(--big-rounded);
+$gap: var(--gap);
+$padding: var(--padding);
+$desktop-width: var(--desktop-width);
+$site-container: var(--site-container);
 

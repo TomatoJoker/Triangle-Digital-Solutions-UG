@@ -7,8 +7,7 @@
 
       .steps__content {
 
-        @include min-media(1500) {
-
+        @include min-media(1200) {
           &:before {
             content: '';
             z-index: 0;
@@ -22,7 +21,6 @@
             background-size: 100% auto;
             background-position: top center;
           }
-
         }
 
 
@@ -78,8 +76,7 @@
     z-index: 1;
 
     @include min-media(1200) {
-      flex-shrink: 0;
-      max-width: 760px;
+      max-width: 48.75%;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;

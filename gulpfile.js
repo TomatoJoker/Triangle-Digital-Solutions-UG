@@ -87,7 +87,8 @@ exports.js = js;
 const jsLibs = () => {
   return gulp.src(
       [
-        './node_modules/swiper/swiper-bundle.min.js',
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/swiper/swiper-bundle.min.js'
       ]
   )
       .pipe(gulp.dest('html/js/'));

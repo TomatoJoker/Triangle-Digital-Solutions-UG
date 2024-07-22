@@ -210,7 +210,8 @@ h4, .h4-title {
     width: 100%;
     height: 100%;
     backdrop-filter: blur(8px);
-    background: rgba($light, 0.8);
+    background: $light;
+    opacity: 0.8;
     border-radius: inherit;
   }
 

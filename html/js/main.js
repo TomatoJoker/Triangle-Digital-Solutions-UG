@@ -1,25 +1,23 @@
-dynamicHeightToolbar();
-window.addEventListener("resize", function () {
-    dynamicHeightToolbar();
-});
-
 function dynamicHeightToolbar() {
-    if (window.innerWidth < 1200) {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    if ($(window).width() < 1200) {
+        const vh = $(window).height() * 0.01;
+        $(':root').css('--vh', `${vh}px`);
     } else {
-        document.documentElement.style.removeProperty('--vh');
+        $(':root').css('--vh', '');
     }
 }
 
-const reviewWrapper = document.querySelector('.js-review-slider');
-const reviewSlider = reviewWrapper.querySelector('.js-review-inner');
-const reviewBtnNext = reviewWrapper.querySelector('.js-review-btn-next');
-const reviewBtnPrev = reviewWrapper.querySelector('.js-review-btn-prev');
+$(window).on('resize', dynamicHeightToolbar);
+dynamicHeightToolbar();
 
-const swiper = new Swiper(reviewSlider, {
+const reviewWrapper = $('.js-review-slider');
+const reviewSlider = reviewWrapper.find('.js-review-inner');
+const reviewBtnNext = reviewWrapper.find('.js-review-btn-next');
+const reviewBtnPrev = reviewWrapper.find('.js-review-btn-prev');
+
+const swiper = new Swiper(reviewSlider[0], {
     navigation: {
-        nextEl: reviewBtnNext,
-        prevEl: reviewBtnPrev,
+        nextEl: reviewBtnNext[0],
+        prevEl: reviewBtnPrev[0],
     }
 });

@@ -6,7 +6,7 @@ Stack:
 - - Preprocessor Nunjucks
 - СSS:
 - - Preprocessor SCSS
-- Native JS
+- jQuery
 
 Instruction:
 - Need node version 14.19.1<br> (for change version you can use NVM https://github.com/coreybutler/nvm-windows/releases)
